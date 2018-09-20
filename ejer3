@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int array[6]={3,4,1,2,6,5};
+int *ptr =array;
+void orde();
+//void rotation();
+bool dire;
+int n = 0;
+
+int main()
+{
+
+    orde();
+    //rotation();
+    return 0;
+}
+
+void orde()
+{
+
+    for(int i=0; i<6; i++){
+        for(int j=i+1; j<6; j++){
+        if(array[j] < array[i]){
+                n=array[i];
+               array[i]=array[j];
+               array[j]=n;
+            }
+        }
+        cout<<array[i]<<"\n";
+    }
+}
